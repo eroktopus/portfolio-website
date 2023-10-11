@@ -99,8 +99,8 @@ page-footer {
 
 .profile__portait {
     float: left;
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
     margin-right: 40px;
     border-radius: 50%;
 }
@@ -242,6 +242,15 @@ button:focus,
     text-align: center;
     flex-direction: column;
 }
+
+.form__info {
+    clear: both;
+    flex-direction: column;
+    text-align: center;
+    flex-direction: column;
+}
+
+
 
 .link__portfolio {
     text-align: center;
