@@ -31,7 +31,9 @@ h1 {
     font-size: 30px;
     font-weight: bold;
     }
-
+.about__title {
+    font-size: 30px;
+}
 
 p {
     color: #101054;
@@ -76,6 +78,7 @@ button {
 
 .personal__item {
     font-size: 16px;
+    max-width: 950px;
 }
 .work__title {
     padding: 30px;
@@ -165,6 +168,7 @@ page-footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     padding-left: 30px;
+    font-size: 8px;
 }
 
 /* start grid fallback */
@@ -172,12 +176,12 @@ page-footer {
     display: inline-block;
     width: 33%;
     padding-left: 30px;
-    font-size: 14px;
+    font-size:12px;
    }
    /* end grid fallback */
    
    @supports (display: grid) {
-    .grid {
+    .grid__master {
       display: grid;
       /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
       grid-template-columns: 1fr 1fr 1fr;
@@ -191,7 +195,7 @@ page-footer {
     width: auto;
     min-height: auto;
     margin: 0;
-    font-size: 12px;
+    font-size:12px;
 }
 .grid__item:last-child {
     grid-column-start: 3;
