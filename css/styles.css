@@ -16,7 +16,13 @@ body {
     background-color: #90b0dd;
 }
 
-
+.form__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    margin: auto;
+    text-align: center;
+}
 
 h1 {
     font-size: 40px;
@@ -133,6 +139,7 @@ page-footer {
 .page-header__item {
     flex: 0 1 200px; 
 }
+
 .page-header__item:last-child {
     flex-grow: 1;
     text-align: right;
@@ -242,15 +249,6 @@ button:focus,
     text-align: center;
     flex-direction: column;
 }
-
-.form__info {
-    clear: both;
-    flex-direction: column;
-    text-align: center;
-    flex-direction: column;
-}
-
-
 
 .link__portfolio {
     text-align: center;
