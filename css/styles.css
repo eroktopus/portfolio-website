@@ -13,7 +13,7 @@ body {
     /* Sets the font size to 16px */
     line-height: 1.6;
     /* Sets the line-height to 1.6 */
-    background-color: #90b0dd;
+    background-color: #80868f;
 }
 
 .form__info {
@@ -34,17 +34,17 @@ h1 {
 
 
 p {
-    color: #1b1b7e;
+    color: #101054;
     font-weight: 600;
     font-size: 18px;
 }
 a {
-    color: #cee55e;
+    color: #101054;
 }
 
 a:visited {
     /* visited link */
-    color: #05676e;
+    color: #101054;
 }
 
 a:hover,
@@ -55,7 +55,7 @@ a:focus {
 
 a:active {
     /* selected link */
-    color: #489c79;
+    color: #101054;
 }
 
 button {
@@ -64,7 +64,7 @@ button {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-    background-color: #357b70;
+    background-color: #000000;
     color: white;
     text-decoration: none;
     /*adds spacing to the button (this will be discussed more in-depth later) */
@@ -76,6 +76,9 @@ button {
 
 .personal__item {
     font-size: 16px;
+}
+.work__title {
+    padding: 30px;
 }
 button:hover,
 button:focus {
@@ -169,6 +172,7 @@ page-footer {
     display: inline-block;
     width: 33%;
     padding-left: 30px;
+    font-size: 14px;
    }
    /* end grid fallback */
    
@@ -179,6 +183,7 @@ page-footer {
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 20px;
       margin: 0;
+      font-size: 12px;
    
     }
 .grid__item {
@@ -186,6 +191,7 @@ page-footer {
     width: auto;
     min-height: auto;
     margin: 0;
+    font-size: 12px;
 }
 .grid__item:last-child {
     grid-column-start: 3;
@@ -274,7 +280,7 @@ button:focus,
 .information-list {
     display: inline-block;
     list-style-type: none;
-    color: #05676e;
+    color: #101054;
 }
 
 @keyframes color-change {
