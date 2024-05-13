@@ -9,7 +9,7 @@ body {
   display: flex;
   width: 100%;
   padding-right: 50px;
-  margin-right: 70px;
+  margin-right: 40px;
 }
 
 .page-header-logo {
@@ -46,10 +46,13 @@ body {
   grid-template-columns: repeat(
     auto-fill,
     minmax(400px, 1fr)
-  ); /* Creates as many columns as can fit, each at least 300px wide */
+  ); /* Maintain the existing grid setup */
   grid-gap: 20px; /* Sets the gap between the cards */
-  padding: 20px; /* Optional: Adds padding around the entire grid */
-  margin-left: 20px;
+  padding: 20px; /* Adds padding around the entire grid for spacing */
+  margin: 0 auto; /* Centers the grid horizontally in its container */
+  width: calc(
+    100% - 40px
+  ); /* Adjust width to account for padding, or adjust as necessary */
 }
 
 .work-card {
@@ -61,6 +64,8 @@ body {
   width: 100%; /* Takes full width of its container up to max-width */
   max-width: 400px; /* Sets a maximum width */
   padding: 20px; /* More internal space */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-card:hover {
@@ -233,7 +238,7 @@ body {
   padding: 20px 0; /* Adds padding on top and bottom, adjust as needed */
   margin: auto; /* Centers the footer if within another container */
   margin-top: 20px; /* Adjust the top margin as per your layout needs */
-  margin-left: 475px;
+  margin-left: 505px;
   min-width: 60%; /* Remove or adjust this as it may restrict the footer's width unnecessarily */
 }
 

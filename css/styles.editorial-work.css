@@ -48,7 +48,7 @@ body {
 }
 
 .temp-title {
-  margin-left: 600px;
+  margin-left: 480px;
 }
 
 .work-card {
@@ -58,12 +58,12 @@ body {
   background-color: #4f6d7a; /* Sets background color */
   transition: transform 0.3s; /* Optional: Adds a transform effect on hover */
   width: calc(100% - 140px);
-  max-width: 1500px;
+  max-width: 1200px;
   padding: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-card:hover {
