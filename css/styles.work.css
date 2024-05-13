@@ -1,7 +1,7 @@
 body {
   font-family: "blairMdITC TT", sans-serif;
   background-color: #616469;
-  padding: 40px;
+  padding: 30px;
   overflow-x: hidden;
 }
 
@@ -9,6 +9,7 @@ body {
   display: flex;
   width: 100%;
   padding-right: 50px;
+  margin-right: 40px;
 }
 
 .logo-container {
@@ -23,7 +24,6 @@ body {
   object-fit: cover; /* Ensures the image covers the area, cropping as needed */
   object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
 }
-
 .main-navigation {
   margin-left: auto;
 }
@@ -174,7 +174,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(
+  background-color: #4f6d7a(
     38,
     109,
     182,
