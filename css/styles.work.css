@@ -9,17 +9,13 @@ body {
   display: flex;
   width: 100%;
   padding-right: 50px;
-  margin-right: 40px;
-}
-
-.logo-container {
-  height: 75px; /* Example height; adjust based on your requirements */
-  width: 30%; /* Adjust width as necessary, or use a specific width */
+  margin-right: 70px;
 }
 
 .page-header-logo {
-  width: 40%; /* Ensures the image fills the width of its container */
+  width: 80%; /* Ensures the image fills the width of its container */
   height: auto; /* Maintains the aspect ratio */
+  margin-left: 30px;
   object-fit: cover; /* Ensures the image covers the area, cropping as needed */
   object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
 }
@@ -32,6 +28,7 @@ body {
   padding: 0;
   display: flex;
   gap: 10px; /* Adjust space between buttons */
+  margin-right: 70px;
 }
 
 .work-title {
@@ -110,6 +107,7 @@ body {
 
 #button-container2 {
   margin-top: 52px;
+  margin-right: 30;
 }
 
 .site-button {
@@ -196,9 +194,10 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #aaa;
+  color: #4f6d7a;
   font-size: 28px;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 

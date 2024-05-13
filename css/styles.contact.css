@@ -12,13 +12,9 @@ body {
   margin-right: 40px;
 }
 
-.logo-container {
-  height: 75px; /* Example height; adjust based on your requirements */
-  width: 30%; /* Adjust width as necessary, or use a specific width */
-}
-
 .page-header-logo {
-  width: 40%; /* Ensures the image fills the width of its container */
+  width: 80%; /* Ensures the image fills the width of its container */
+  margin-left: 30px;
   height: auto; /* Maintains the aspect ratio */
   object-fit: cover; /* Ensures the image covers the area, cropping as needed */
   object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
@@ -33,6 +29,7 @@ body {
   padding: 0;
   display: flex;
   gap: 10px; /* Adjust space between buttons */
+  margin-right: 70px;
 }
 
 .work-title {
