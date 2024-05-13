@@ -13,22 +13,22 @@ body {
 }
 
 .site-logo-container {
-  overflow: hidden; /* Keeps any overflowed content from being visible */
-  height: 120px; /* Example height; adjust based on your requirements */
-  width: 30%; /* Adjust width as necessary, or use a specific width */
-  padding-top: 270px;
-  padding-left: 660px;
+  margin-top: 200px;
+  height: 240px; /* Adjusted height to accommodate a larger logo */
+  width: 100%; /* Keeps the container responsive */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-logo {
-  width: 60%; /* Ensures the image fills the width of its container */
-  height: auto; /* Maintains the aspect ratio */
-  object-fit: cover; /* Ensures the image covers the area, cropping as needed */
-  object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
+  width: 350px; /* Explicit width for the logo */
+  height: 350px; /* Matching height to maintain aspect ratio if necessary */
+  object-fit: contain; /* Keeps the entire logo visible, scales it down if it exceeds container */
 }
 
 .job-button-container {
-  padding-top: 50px;
+  padding-top: 15px;
   display: flex; /* Aligns children (buttons) in a row */
   justify-content: center; /* Centers the buttons horizontally in the container */
   gap: 10px; /* Adds space between the buttons */
