@@ -13,7 +13,6 @@ body {
 }
 
 .logo-container {
-  overflow: hidden; /* Keeps any overflowed content from being visible */
   height: 75px; /* Example height; adjust based on your requirements */
   width: 30%; /* Adjust width as necessary, or use a specific width */
 }
