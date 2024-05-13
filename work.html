@@ -1,82 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Erok Editorial</title>
-    <link rel="icon" href="/img/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.work.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<header class="page-header">
-
-    <img src="img/erik-3.png" alt="logo" class="page-header__item">
+  <header class="page-header">
+    <div class="logo-container">
+      <img src="img/erik-4.png" alt="logo" class="page-header-logo" />
+    </div>
     <nav class="main-navigation page-header__item">
-        <ul role="menubar" class="navigation-list">
-            <li role="presentation">
-                <a href="index.html" role="menuitem" class="navigation_list__item--active">Home</a>
-            </li>
-            <li role="presentation">
-                <a href="about.html" role="menuitem" class="navigation_list__item">About</a>
-            </li>
-            <li role="presentation">
-                <a href="contact.html" role="menuitem" class="navigation_list__item">Contact</a>
-            </li>
-            <li role="presentation">
-                <a href="work.html" role="menuitem" class="navigation_list__item">Work</a>
-            </li>
-        </ul>
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="site-button">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="site-button">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="site-button">About</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="site-button">Contact</a>
+        </li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<body>
-    
-<section>
-    <h1 class="work__title">Work</h1>
-    <div class="grid__master">
-        <div class="grid__item">
-            <h2>Front End Design</h2>
-            <p>This is my first project. I am currently working on html and css.</p>
+  <body>
+    <h1 class="work-title">Work</h1>
+    <div class="work-card-grid">
+      <div class="work-card">
+        <img
+          src="img/myFlix Screenshot.png"
+          alt="Card Image"
+          class="card-image"
+        />
+        <h2 class="card-title">Angular myFlix App</h2>
+        <p class="card-text">
+          A feature-rich, Angular-based client-side application designed to
+          provide movie enthusiasts with a seamless and intuitive interface for
+          accessing, exploring, and saving information about their favorite
+          movies, directors, and genres.
+        </p>
+        <div id="button-container1" class="card-button-container">
+          <a
+            href="https://eroktopus.github.io/myFlix-Angular-client/welcome"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >App</a
+          >
+          <a
+            href="https://github.com/eroktopus/myFlix-Angular-client"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >Code</a
+          >
+          <button class="site-button detailsButton">Details</button>
         </div>
-        <div class="grid__item">
-            <h2>Editorial</h2>
-            <p>My editorial work will be included here.</p>
+        <!-- Modal is now immediately after the button that triggers it -->
+        <div class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close-button">×</span>
+            <p>
+              Angular myFlix App is a feature-rich, Angular-based client-side
+              application designed to provide movie enthusiasts with a seamless
+              and intuitive interface for accessing, exploring, and saving
+              information about their favorite movies, directors, and genres.
+            </p>
+            <ul>
+              <li>
+                Features secure user registration and login capabilities,
+                allowing users to set up and access personal accounts.
+              </li>
+              <li>
+                Allows users to browse an extensive list of movies, view
+                detailed information on each film, and access additional details
+                about directors and genres from within individual movie views.
+              </li>
+              <li>
+                Utilizes Angular Material for a sleek, responsive design that
+                provides an optimal user experience on any device.
+              </li>
+              <li>
+                Incorporates dynamic single-page application architecture for
+                smooth navigation and immediate content updates without
+                reloading the page.
+              </li>
+            </ul>
+            <div class="tech-buttons">
+              <button class="tech-button">Angular</button>
+              <button class="tech-button">TypeScript</button>
+              <button class="tech-button">Angular Material</button>
+              <button class="tech-button">RESTful API</button>
+              <button class="tech-button">HTML</button>
+              <button class="tech-button">SCSS</button>
+            </div>
+          </div>
         </div>
-        <div class="grid__item">
-            <h2>Previous Work</h2>
-            <p>Links to previous work will be included here.</p>
+      </div>
+
+      <div class="work-card">
+        <img
+          src="img/meet app screenshot.png"
+          alt="Card Image"
+          class="card-image"
+        />
+        <h2 class="card-title">React meetApp</h2>
+        <p class="card-text">
+          A serverless, progressive web application built with React, utilizing
+          the Google Calendar API for fetching and sorting upcoming events in
+          different cities.
+        </p>
+        <div id="button-container2" class="card-button-container">
+          <a
+            href="https://eroktopus.github.io/Meet_App/"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >App</a
+          >
+          <a
+            href="https://github.com/eroktopus/Meet_App"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >Code</a
+          >
+          <button class="site-button detailsButton">Details</button>
+          <div class="modal" style="display: none">
+            <div class="modal-content">
+              <span class="close-button">×</span>
+              <p>
+                React meetApp is a serverless, progressive web application built
+                with React, utilizing the Google Calendar API for fetching and
+                sorting upcoming events in different cities.
+              </p>
+              <ul>
+                <li>
+                  Enables users to effortlessly search and filter events by
+                  city, providing real-time access to upcoming events and
+                  detailed event information directly through the Google
+                  Calendar service.
+                </li>
+                <li>
+                  Utilizes service workers to allow offline functionality,
+                  ensuring that users can access previously loaded event data
+                  and interact with the app even in the absence of an internet
+                  connection.
+                </li>
+                <li>
+                  Designed as a Progressive Web App (PWA) to ensure a seamless
+                  and responsive user experience across all devices, with
+                  features like "add to home screen" for easy access and push
+                  notifications for updates.
+                </li>
+                <li>
+                  Incorporates interactive data visualization tools to display
+                  event details graphically, with charts showing the
+                  distribution of events by city and the popularity of event
+                  genres, enhancing user engagement and data comprehension.
+                </li>
+              </ul>
+              <div class="tech-buttons">
+                <button class="tech-button">React</button>
+                <button class="tech-button">JavaScript</button>
+                <button class="tech-button">Google Calendar API</button>
+                <button class="tech-button">AWS lambda</button>
+                <button class="tech-button">HTML</button>
+                <button class="tech-button">CSS</button>
+                <button class="tech-button">Recharts</button>
+                <button class="tech-button">Jest</button>
+                <button class="tech-button">Cucumber</button>
+                <button class="tech-button">Pupeteer</button>
+                <button class="tech-button">OAuth2</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="grid__item">
-            <h2>Record Collection</h2>
-            <p>A link to the records that have been added to my collection.</p>
+      </div>
+
+      <div class="work-card">
+        <img
+          src="img/myFlix react screenshot.png"
+          alt="Card Image"
+          class="card-image"
+        />
+        <h2 class="card-title">React myFlix App</h2>
+        <p class="card-text">
+          A single-page, responsive web application built with React, allowing
+          movie enthusiasts to access and save information about different
+          movies, with features including user authentication, movie filtering,
+          and profile management.
+        </p>
+        <div class="card-button-container">
+          <a
+            href="https://myflixdatabase.netlify.app/"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >App</a
+          >
+          <a
+            href="https://github.com/eroktopus/myFlix-client6"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >Code</a
+          >
+          <button class="site-button detailsButton">Details</button>
         </div>
-        <div class="grid__item">
-            <h2>Travels</h2>
-            <p>A running list of destinations I have traveled to.</p>
+        <!-- Modal is now immediately after the button that triggers it -->
+        <div class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close-button">×</span>
+            <p>
+              React myFlix App is A single-page, responsive web application
+              built with React, allowing movie enthusiasts to access and save
+              information about different movies, with features including user
+              authentication, movie filtering, and profile management.
+            </p>
+            <ul>
+              <li>
+                Utilizes React to create a dynamic and responsive single-page
+                application that allows users to view a comprehensive list of
+                movies, complete with images, titles, and descriptions,
+                enhancing user interaction through seamless navigation and
+                instant updates without page reloads.
+              </li>
+              <li>
+                Supports user engagement by enabling movie enthusiasts to create
+                personal profiles, save their favorite movies, and manage their
+                information easily, with functionalities to update user details,
+                add or remove favorite movies, and deregister as needed.
+              </li>
+
+              <li>
+                Incorporates a robust search feature that allows users to
+                quickly find movies based on specific criteria within the app,
+                enhancing the user experience by making movie discovery
+                straightforward and efficient.
+              </li>
+              <li>
+                Offers detailed views for each movie, including descriptions,
+                genres, and director information, and allows users to add movies
+                to their favorites list, providing a personalized interaction
+                that caters to the preferences of individual users.
+              </li>
+            </ul>
+            <div class="tech-buttons">
+              <button class="tech-button">React</button>
+              <button class="tech-button">JavaScript</button>
+              <button class="tech-button">HTML</button>
+              <button class="tech-button">SCSS</button>
+              <button class="tech-button">React-BootStrap</button>
+              <button class="tech-button">Netlify</button>
+              <button class="tech-button">Parcel</button>
+            </div>
+          </div>
         </div>
-        <div class="grid__item">
-            <h2>Photos</h2>
-            <p>Link to photos I have taken over the years.</p>
+      </div>
+      <div id="mobile-images" class="work-card">
+        <img
+          src="img/chat app screenshot 1.png"
+          alt="Card Image"
+          class="mobile-image"
+        />
+        <img
+          src="img/chat app screenshot 3.png"
+          alt="Card Image"
+          class="mobile-image"
+        />
+        <img
+          src="img/chat app screenshot 2.png"
+          alt="Card Image"
+          class="mobile-image"
+        />
+        <h2 class="card-title">React Native Chat App</h2>
+        <p class="card-text">
+          A mobile chat application developed using React Native and Expo,
+          enabling users to exchange messages, share images, and locations
+          seamlessly, while supporting offline access and accessibility
+          features.
+        </p>
+        <div class="card-button-container">
+          <a
+            href="https://vimeo.com/945410106?share=copy"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >App</a
+          >
+          <a
+            href="https://github.com/eroktopus/mobileChatApp"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >Code</a
+          >
+          <button class="site-button detailsButton">Details</button>
         </div>
+        <!-- Modal is now immediately after the button that triggers it -->
+        <div class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close-button">×</span>
+            <p>
+              React Native Chat App is A mobile chat application developed using
+              React Native and Expo, enabling users to exchange messages, share
+              images, and locations seamlessly, while supporting offline access
+              and accessibility features.
+            </p>
+            <ul>
+              <li>
+                Employs React Native to construct a sophisticated chat interface
+                that enables users to seamlessly exchange messages, images, and
+                location data, enhancing interaction with real-time
+                communication capabilities.
+              </li>
+              <li>
+                Allows users to personalize their chat environment by selecting
+                a background color and entering their name before joining the
+                chat, providing a customized user experience right from the
+                start.
+              </li>
+
+              <li>
+                Integrates functionalities for users to share images either from
+                their device's library or directly using the camera, alongside
+                the ability to share their current location through an
+                interactive map view, enriching the ways users can communicate.
+              </li>
+              <li>
+                Ensures that all conversations are stored both locally and in
+                Google Firestore Database, allowing users to access and review
+                chats offline while ensuring data consistency across devices.
+              </li>
+            </ul>
+            <div class="tech-buttons">
+              <button class="tech-button">React Native</button>
+              <button class="tech-button">JavaScript</button>
+              <button class="tech-button">Firebase</button>
+              <button class="tech-button">Firestore</button>
+              <button class="tech-button">Expo</button>
+              <button class="tech-button">Gifted Chat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <img
+          src="img/myflix api screenshot.png"
+          alt="Card Image"
+          class="card-image"
+        />
+        <h2 class="card-title">myFlix API</h2>
+        <p class="card-text">
+          A robust server-side component for a web application called myFlix,
+          allowing users to access, store, and manage information about movies,
+          directors, and genres, implemented with Node.js, Express, MongoDB, and
+          Mongoose.
+        </p>
+        <div class="card-button-container">
+          <a
+            href="https://github.com/eroktopus/movie_api"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >Code</a
+          >
+          <button class="site-button detailsButton">Details</button>
+        </div>
+        <!-- Modal is now immediately after the button that triggers it -->
+        <div class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close-button">×</span>
+            <p>
+              myFlix API is A robust server-side component for a web application
+              called myFlix, allowing users to access, store, and manage
+              information about movies, directors, and genres, implemented with
+              Node.js, Express, MongoDB, and Mongoose.
+            </p>
+            <ul>
+              <li>
+                Provides users with extensive access to a rich database of
+                movies, enabling them to retrieve detailed information about
+                each film, including descriptions, genres, directors, and
+                featured images.
+              </li>
+              <li>
+                Facilitates user interaction with the system by allowing them to
+                register, update personal information, manage a list of favorite
+                movies, and even deregister, ensuring a personalized and secure
+                user experience.
+              </li>
+              <li>
+                Offers users detailed information about specific genres and
+                directors, enhancing their understanding and appreciation of
+                films through contextual data like director biographies and
+                genre descriptions.
+              </li>
+              <li>
+                Empowers users with the ability to add or remove movies from
+                their favorites list, and supports complex queries for movie,
+                genre, and director information, all via a well-designed REST
+                API that ensures efficient and reliable data manipulation.
+              </li>
+            </ul>
+
+            <div class="tech-buttons">
+              <button class="tech-button">HTML</button>
+              <button class="tech-button">MongoDB</button>
+              <button class="tech-button">JavaScript</button>
+              <button class="tech-button">Mongoose</button>
+              <button class="tech-button">Node.js</button>
+              <button class="tech-button">Express</button>
+              <button class="tech-button">Postman</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <img
+          src="img/pokedex screenshot.png"
+          alt="Card Image"
+          class="card-image"
+        />
+        <h2 class="card-title">JS Pokedex App</h2>
+        <p class="card-text">
+          A web application built with HTML, CSS, and JavaScript, integrating an
+          external API to present and explore data interactively, incorporating
+          advanced features like touch interactions and loading indicators,
+          while prioritizing cross-browser functionality.
+        </p>
+        <div class="card-button-container">
+          <a
+            href="https://eroktopus.github.io/simple-js-app/"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >App</a
+          >
+          <a
+            href="https://github.com/eroktopus/simple-js-app"
+            role="menuitem"
+            class="site-button"
+            target="_blank"
+            >Code</a
+          >
+          <button class="site-button detailsButton">Details</button>
+        </div>
+        <!-- Modal is now immediately after the button that triggers it -->
+        <div class="modal" style="display: none">
+          <div class="modal-content">
+            <span class="close-button">×</span>
+            <p>
+              JavaScript Pokedex App is A web application built with HTML, CSS,
+              and JavaScript, integrating an external API to present and explore
+              data interactively, incorporating advanced features like touch
+              interactions and loading indicators, while prioritizing
+              cross-browser functionality.
+            </p>
+            <ul>
+              <li>
+                Employs HTML, CSS, and JavaScript to create a user-friendly web
+                application that allows users to browse a list of Pokémon. Each
+                entry in the list includes visual and text descriptions,
+                offering a dynamic and engaging user experience.
+              </li>
+              <li>
+                Integrates with an external API to fetch real-time data on
+                Pokémon, including details like species, abilities, and stats.
+                This ensures that users receive the most current information
+                directly from a reliable source.
+              </li>
+              <li>
+                Provides a feature where users can click on a Pokémon in the
+                list to view a detailed modal profile, which includes
+                comprehensive data such as Pokémon abilities, evolutionary
+                stages, and type matchups.
+              </li>
+              <li>
+                Enhances user engagement with advanced UI elements such as
+                search functionality to filter Pokémon by name, type, or
+                ability, and interactive modals that display detailed data
+                points for a more in-depth exploration of Pokémon
+                characteristics.
+              </li>
+            </ul>
+
+            <div class="tech-buttons">
+              <button class="tech-button">HTML</button>
+              <button class="tech-button">CSS</button>
+              <button class="tech-button">JavaScript</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/erok73/"
+            ><img src="img/317750_linkedin_icon.svg" alt=""
+          /></a>
+          <a href="https://github.com/eroktopus"
+            ><img src="img/icons8-github.svg" alt=""
+          /></a>
+        </div>
+      </footer>
+
+      <script src="js/work.js"></script>
     </div>
-</section>
-
-
-<footer class="page-footer">
-    <p>Find me on</p>
-    <div class="social-media">
-      <a href="https://github.com/eroktopus/portfolio-website"><img src="img/icons8-github.svg" alt=""></a>
-      <a href="https://www.linkedin.com/in/erok73/"><img src="img/317750_linkedin_icon.svg" alt=""></a>
-    </div>
-  </footer>
-
-<script src="js/tota11y.min.js"></script>
-
-</body>
-
+  </body>
 </html>

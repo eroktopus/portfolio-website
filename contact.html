@@ -1,78 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-   
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Erok Editorial</title>
-    <link rel="icon" href="/img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.contact.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<body>
-
-    <header class="page-header">
-
-
-        <img src="img/erik-3.png" alt="logo" class="page-header__item">
-        <nav class="main-navigation page-header__item">
-            <ul role="menubar" class="navigation-list">
-                <li role="presentation">
-                    <a href="index.html" role="menuitem" class="navigation_list__item--active">Home</a>
-                </li>
-                <li role="presentation">
-                    <a href="about.html" role="menuitem" class="navigation_list__item">About</a>
-                </li>
-                <li role="presentation">
-                    <a href="contact.html" role="menuitem" class="navigation_list__item">Contact</a>
-                </li>
-                <li role="presentation">
-                    <a href="work.html" role="menuitem" class="navigation_list__item">Work</a>
-                </li>
-            </ul>
-          </nav>
-    </header>
-
-
-    <img src="img/Erik-Portrait.png" class="profile__portait" alt="logo" width="200" height="200">
-
-
-    <div class="contact__info">
-        <h1>Contact</h1>
-        <p class="personal__item">Erik Emond<br>
-            Stroudsburg, Pennsylvania<br>
-            Tel <a href="tel:3476837333">347.683.7333</a> <br>
-            Skype <a href="skype:hello.careerfoundry">hello.careerfoundry.com</a> <br>
-            <a href="mailto:erik.emond@gmail.com">Email: erik.emond@gmail.com</a>
-        </p>
+  <header class="page-header">
+    <div class="logo-container">
+      <img src="img/erik-4.png" alt="logo" class="page-header-logo" />
     </div>
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="site-button">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="site-button">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="site-button">About</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="site-button">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <div>
-        <form class="form__info" action="Contact" method="post" id="contact-form">
-            <label class="standard-label" for="contact-email">E-mail: </label>
-            <input type="email" id="contact-email" required="required">
+  <body>
+    <h1 class="work-title">Contact Me</h1>
 
-            <label class="standard-label">Telephone:</label>
-            <input type="tel" id="telephone-number">
+    <div class="work-card">
+    <div class="row justify-content-center">
+      <!-- Address -->
+      <div class="col-md-4">
+        <div class="dbox w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-map-marker"></span>
+          </div>
+          <div class="text">
+            <p><div>Address:</div>
+              <div>Stroudsburg, PA / NYC </div> </p>
+          </div>
+        </div>
+      </div>
 
-            <label class="standard-label" for="message"> Message:</label>
-            <textarea required maxlength="240"></textarea>
+      <!-- Phone -->
+      <div class="col-md-4">
+        <div class="dbox w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-phone"></span>
+          </div>
+          <div class="text">
+            <p>
+              <div>Phone:</div>
+              <div> <a href="tel://1234567920" style="color: black;">+ 1 347 683 7333</a> </div>
+            </p>
+          </div>
+        </div>
+      </div>
 
-            <input type="submit" id="message" value="Send message">
-        </form>
+      <!-- Email -->
+      <div class="col-md-4">
+        <div class="dbox w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-paper-plane"></span>
+          </div>
+          <div class="text">
+            <p>
+              <div class="contact-category">Email:</div>
+             <div><a href="mailto:info@yoursite.com" style="color: black;" target="_blank">erik.emond@gmail.com</a>
+             </div> 
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
     <footer class="page-footer">
-        <p>Find me on</p>
-        <div class="social-media">
-          <a href="https://github.com/eroktopus/portfolio-website"><img src="img/icons8-github.svg" alt=""></a>
-          <a href="https://www.linkedin.com/in/erok73/"><img src="img/317750_linkedin_icon.svg" alt=""></a>
-        </div>
-      </footer>
+      <p>Find me on</p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/erok73/"
+          ><img src="img/317750_linkedin_icon.svg" alt=""
+        /></a>
+        <a href="https://github.com/eroktopus"
+          ><img src="img/icons8-github.svg" alt=""
+        /></a>
+      </div>
+    </footer>
 
-
-    <script src="js/tota11y.min.js"></script>
-</body>
-
+    <script src="js/work.js"></script>
+  </body>
 </html>

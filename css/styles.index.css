@@ -1,0 +1,100 @@
+body {
+  font-family: "blairMdITC TT", sans-serif;
+  background-color: #616469;
+}
+
+*/ .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 400px;
+  padding-top: 200px;
+}
+
+.site-logo-container {
+  overflow: hidden; /* Keeps any overflowed content from being visible */
+  height: 120px; /* Example height; adjust based on your requirements */
+  width: 30%; /* Adjust width as necessary, or use a specific width */
+  padding-top: 270px;
+  padding-left: 660px;
+}
+
+.site-logo {
+  width: 60%; /* Ensures the image fills the width of its container */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area, cropping as needed */
+  object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
+}
+
+.job-button-container {
+  padding-top: 50px;
+  display: flex; /* Aligns children (buttons) in a row */
+  justify-content: center; /* Centers the buttons horizontally in the container */
+  gap: 10px; /* Adds space between the buttons */
+}
+
+.job-button {
+  background-color: transparent;
+  border: 1px solid #437ab2;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: "blairMdITC TT", sans-serif;
+  font-size: 17px;
+  font-weight: extra-bold;
+  line-height: 18px;
+  padding: 15px 15px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.job-button:hover,
+.job-button:active {
+  outline: 0;
+}
+
+.job-button:hover {
+  background-color: transparent;
+}
+
+.job-button:before {
+  background-color: #4f6d7a;
+  content: "";
+  height: calc(100% + 1px);
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.job-button:hover:before {
+  background-color: #266db6;
+}
+
+.job-button a {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Ensures the link color is the same as the button text color */
+  display: inline-block; /* Ensures full area inside button is clickable */
+}
+
+.social-media {
+  display: flex; /* Uses Flexbox to lay out children */
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Aligns children vertically in the middle */
+  gap: 20px; /* Sets space between each logo */
+  flex-wrap: nowrap; /* Prevents wrapping into a new line */
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 200px;
+}

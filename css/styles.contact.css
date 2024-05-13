@@ -1,0 +1,191 @@
+body {
+  font-family: "blairMdITC TT", sans-serif;
+  background-color: #616469;
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding-right: 50px;
+  margin-right: 40px;
+}
+
+.logo-container {
+  overflow: hidden; /* Keeps any overflowed content from being visible */
+  height: 75px; /* Example height; adjust based on your requirements */
+  width: 30%; /* Adjust width as necessary, or use a specific width */
+}
+
+.page-header-logo {
+  width: 40%; /* Ensures the image fills the width of its container */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area, cropping as needed */
+  object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
+}
+
+.main-navigation {
+  margin-left: auto;
+}
+
+.navigation-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px; /* Adjust space between buttons */
+}
+
+.work-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  max-width: 400px;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+.row justify-content-center {
+  padding-top: 50px;
+}
+
+.text-center {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.work-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a 3D effect */
+  border-radius: 8px; /* Rounds the corners */
+  overflow: hidden; /* Ensures content adheres to the border radius */
+  background-color: #4f6d7a; /* Sets background color */
+  transition: transform 0.3s; /* Optional: Adds a transform effect on hover */
+  width: calc(100% - 140px);
+  max-width: 1500px; /* Sets a maximum width */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.work-card:hover {
+  transform: scale(1.05); /* Optional: Scales up cards slightly on hover */
+}
+
+.fa-map-marker {
+  color: #4f6d7a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+}
+
+.fa-phone {
+  color: #4f6d7a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+}
+
+.fa-paper-plane {
+  color: #4f6d7a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 31px;
+}
+
+.site-button {
+  background-color: transparent;
+  border: 1px solid #437ab2;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: "blairMdITC TT", sans-serif;
+  font-size: 10px; /* Reduced from 12px to make the text smaller */
+  font-weight: extra-bold;
+  line-height: 18px; /* Reduced to fit the smaller font */
+  padding: 4px 8px; /* Reduced padding to make the button smaller */
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.site-button:hover,
+.site-button:active {
+  outline: 0;
+}
+
+.site-button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.site-button:before {
+  background-color: #4f6d7a;
+  content: "";
+  height: calc(100% + 1px); /* Reduced extra height for a tighter fit */
+  position: absolute;
+  right: -3px; /* Adjusted for smaller overall size */
+  top: -3px; /* Adjusted for smaller overall size */
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.site-button:hover:before {
+  background-color: #266db6;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20;
+  min-width: 60%; /* Adjust this value based on your design needs */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* This prevents wrapping */
+  align-items: center; /* Vertically centers the content in the flex container */
+}
+
+.row {
+  display: flex;
+  flex-wrap: no-wrap; /* Prevents wrapping by default */
+  justify-content: center;
+  gap: 20px; /* Space between columns */
+}
+
+.col-md-4 {
+  flex: 0 0 33.3333%; /* Each column takes up one-third of the row */
+  max-width: 33.3333%;
+  font-size: 20px; /* Existing font size */
+  display: flex; /* Ensures the container is a flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically */
+}
+
+.dbox {
+  width: 100%; /* Takes full width of the column */
+  display: flex; /* Ensures this is a flex container */
+  flex-direction: column; /* Aligns children vertically */
+  align-items: center; /* Centers content horizontally in the dbox */
+  justify-content: center; /* Centers content vertically in the dbox */
+}
+
+@media (min-width: 768px) {
+  .site-button {
+    padding: 16px 32px;
+    flex: 0 0 100%; /* Stacks the columns on smaller screens */
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,254 @@
+body {
+  font-family: "blairMdITC TT", sans-serif;
+  background-color: #616469;
+  padding: 40px;
+  overflow-x: hidden;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding-right: 50px;
+}
+
+.logo-container {
+  overflow: hidden; /* Keeps any overflowed content from being visible */
+  height: 75px; /* Example height; adjust based on your requirements */
+  width: 30%; /* Adjust width as necessary, or use a specific width */
+}
+
+.page-header-logo {
+  width: 40%; /* Ensures the image fills the width of its container */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area, cropping as needed */
+  object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
+}
+
+.main-navigation {
+  margin-left: auto;
+}
+
+.navigation-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px; /* Adjust space between buttons */
+}
+
+.work-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  max-width: 400px;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+.work-card-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* Creates as many columns as can fit, each at least 300px wide */
+  grid-gap: 20px; /* Sets the gap between the cards */
+  padding: 20px; /* Optional: Adds padding around the entire grid */
+  margin-left: 20px;
+}
+
+.work-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a 3D effect */
+  border-radius: 8px; /* Rounds the corners */
+  overflow: hidden; /* Ensures content adheres to the border radius */
+  background-color: #4f6d7a; /* Sets background color */
+  transition: transform 0.3s; /* Optional: Adds a transform effect on hover */
+  width: 100%; /* Takes full width of its container up to max-width */
+  max-width: 400px; /* Sets a maximum width */
+  padding: 20px; /* More internal space */
+}
+
+.work-card:hover {
+  transform: scale(1.05); /* Optional: Scales up cards slightly on hover */
+}
+
+.card-image {
+  height: 260px; /* Sets a fixed height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 17px;
+}
+
+.mobile-image {
+  height: 260px; /* Sets a fixed height */
+  object-fit: cover;
+  border-radius: 25px;
+  padding: 3px;
+}
+
+.card-title,
+.card-text {
+  margin: 0 0 10px 0; /* Adds margin to the bottom of the title and text */
+}
+
+.card-title {
+  font-size: 24px; /* Adjusts the title size */
+  font-weight: bold; /* Makes the title bold */
+  padding-top: 10px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 14px; /* Adjusts the text size */
+  text-align: center;
+}
+
+.card-button-container {
+  display: flex; /* Aligns children in a row */
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 20px; /* Adds space between each button */
+  margin-top: 20px; /* Adds space above the buttons */
+}
+
+#button-container2 {
+  margin-top: 52px;
+}
+
+.site-button {
+  background-color: transparent;
+  border: 1px solid #437ab2;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: "blairMdITC TT", sans-serif;
+  font-size: 10px; /* Reduced from 12px to make the text smaller */
+  font-weight: extra-bold;
+  line-height: 18px; /* Reduced to fit the smaller font */
+  padding: 4px 8px; /* Reduced padding to make the button smaller */
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.site-button:hover,
+.site-button:active {
+  outline: 0;
+}
+
+.site-button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.site-button:before {
+  background-color: #4f6d7a;
+  content: "";
+  height: calc(100% + 1px); /* Reduced extra height for a tighter fit */
+  position: absolute;
+  right: -3px; /* Adjusted for smaller overall size */
+  top: -3px; /* Adjusted for smaller overall size */
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.site-button:hover:before {
+  background-color: #266db6;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(
+    38,
+    109,
+    182,
+    0.95
+  ); /* Slightly transparent background */
+  padding: 30px;
+  font-size: 12px;
+  border: 1px solid #888;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+  width: 800px; /* Set a fixed width but ensure it does not exceed the viewport width */
+  max-width: 96%; /* Prevents the modal from being wider than the screen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Prevents content from spilling out */
+  position: relative; /* Ensures that the close button is positioned relative to this container */
+  margin: 20px auto; /* Center the modal-content horizontally and add spacing */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tech-buttons {
+  display: flex; /* This will enable flexbox properties for the container */
+  justify-content: center; /* This centers the buttons horizontally in the container */
+  gap: 10px; /* This sets the space between each button */
+  margin-top: 20px; /* This adds space above the container */
+  flex-wrap: wrap; /* This allows the buttons to wrap onto the next line if there isn't enough space */
+}
+.tech-button {
+  background-color: #4f6d7a;
+}
+
+.tech-button:hover {
+  background-color: #266db6;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally in the footer */
+  justify-content: center; /* Center align items vertically in the footer */
+  text-align: center; /* Ensures text within the footer is centered */
+  width: 100%; /* Ensures the footer extends the full width of its container */
+  padding: 20px 0; /* Adds padding on top and bottom, adjust as needed */
+  margin: auto; /* Centers the footer if within another container */
+  margin-top: 20px; /* Adjust the top margin as per your layout needs */
+  margin-left: 475px;
+  min-width: 60%; /* Remove or adjust this as it may restrict the footer's width unnecessarily */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* This prevents wrapping */
+  align-items: center; /* Vertically centers the content in the flex container */
+}
+
+@media (min-width: 768px) {
+  .site-button {
+    padding: 16px 32px;
+  }
+}
