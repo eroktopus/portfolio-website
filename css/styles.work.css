@@ -43,10 +43,7 @@ body {
 
 .work-card-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(400px, 1fr)
-  ); /* Maintain the existing grid setup */
+  grid-template-columns: 1fr 1fr 1fr; /* Sets a single column layout */
   grid-gap: 20px; /* Sets the gap between the cards */
   padding: 20px; /* Adds padding around the entire grid for spacing */
   margin: 0 auto; /* Centers the grid horizontally in its container */
@@ -66,6 +63,7 @@ body {
   padding: 20px; /* More internal space */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .work-card:hover {
@@ -237,7 +235,6 @@ body {
   width: 100%; /* Ensures the footer extends the full width of its container */
   padding: 20px 0; /* Adds padding on top and bottom, adjust as needed */
   margin: auto; /* Centers the footer if within another container */
-  margin-top: 20px; /* Adjust the top margin as per your layout needs */
   margin-left: 505px;
   min-width: 60%; /* Remove or adjust this as it may restrict the footer's width unnecessarily */
 }
