@@ -235,7 +235,7 @@ body {
   width: 100%; /* Ensures the footer extends the full width of its container */
   padding: 20px 0; /* Adds padding on top and bottom, adjust as needed */
   margin: auto; /* Centers the footer if within another container */
-  margin-left: 550px;
+  margin-left: 560px;
   min-width: 60%; /* Remove or adjust this as it may restrict the footer's width unnecessarily */
 }
 
