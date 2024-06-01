@@ -1,15 +1,23 @@
+@font-face {
+  font-family: "Blair ITC Medium";
+  src: url("../fonts/Blair ITC Medium.woff2") format("woff2"),
+    url("../fonts/Blair ITC Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "blairMdITC TT", sans-serif;
+  font-family: "Blair ITC Medium", sans-serif;
   background-color: #616469;
 }
 
-*/ .profile {
+.profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
   max-width: 400px;
-  padding-top: 200px;
+  padding-top: 50px;
 }
 
 .site-logo-container {
@@ -49,6 +57,7 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .job-button:hover,
@@ -95,6 +104,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  flex-direction: column;
   padding-top: 200px;
+  padding-bottom: 100px;
 }

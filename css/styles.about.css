@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Blair ITC Medium";
+  src: url("../fonts/Blair ITC Medium.woff2") format("woff2"),
+    url("../fonts/Blair ITC Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "blairMdITC TT", sans-serif;
+  font-family: "Blair ITC Medium", sans-serif;
   background-color: #616469;
   padding: 30px;
   overflow-x: hidden;
