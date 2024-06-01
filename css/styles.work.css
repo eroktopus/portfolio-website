@@ -43,13 +43,7 @@ body {
 
 .work-card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Sets a single column layout */
-  grid-gap: 10px; /* Sets the gap between the cards */
-  padding: 10px; /* Adds padding around the entire grid for spacing */
-  margin: 0 auto; /* Centers the grid horizontally in its container */
-  width: calc(
-    100% - 40px
-  ); /* Adjust width to account for padding, or adjust as necessary */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .work-card {
@@ -235,7 +229,7 @@ body {
   width: 100%; /* Ensures the footer extends the full width of its container */
   padding: 20px 0; /* Adds padding on top and bottom, adjust as needed */
   margin: auto; /* Centers the footer if within another container */
-  margin-left: 565px;
+  margin-left: 530px;
   min-width: 60%; /* Remove or adjust this as it may restrict the footer's width unnecessarily */
 }
 
