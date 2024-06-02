@@ -19,6 +19,7 @@ body {
   object-fit: cover; /* Ensures the image covers the area, cropping as needed */
   object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
 }
+
 .main-navigation {
   margin-left: auto;
 }
@@ -43,7 +44,22 @@ body {
 
 .work-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem; /* Doubled the gap from 1rem to 2rem */
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 40px;
+}
+
+.work-card {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.work-card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .work-card {
@@ -55,9 +71,6 @@ body {
   width: 100%; /* Takes full width of its container up to max-width */
   max-width: 400px; /* Sets a maximum width */
   padding: 20px; /* More internal space */
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
 }
 
 .work-card:hover {
@@ -223,14 +236,12 @@ body {
 .page-footer {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align items horizontally in the footer */
-  justify-content: center; /* Center align items vertically in the footer */
-  text-align: center; /* Ensures text within the footer is centered */
-  width: 100%; /* Ensures the footer extends the full width of its container */
-  padding: 20px 0; /* Adds padding on top and bottom, adjust as needed */
-  margin: auto; /* Centers the footer if within another container */
-  margin-left: 530px;
-  min-width: 60%; /* Remove or adjust this as it may restrict the footer's width unnecessarily */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20;
+  min-width: 60%; /* Adjust this value based on your design needs */
 }
 
 .social-media {
@@ -244,5 +255,17 @@ body {
 @media (min-width: 768px) {
   .site-button {
     padding: 16px 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .work-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .work-card-grid {
+    grid-template-columns: 1fr;
   }
 }
