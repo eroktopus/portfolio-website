@@ -15,15 +15,16 @@ body {
 
 .page-header {
   display: flex;
+  justify-content: space-between; /* Ensures space between logo and navigation */
+  align-items: center;
   width: 100%;
-  padding-right: 50px;
-  margin-right: 40px;
+  padding: 10px 50px; /* Adjusted padding */
+  box-sizing: border-box;
 }
 
 .page-header-logo {
-  width: 80%; /* Ensures the image fills the width of its container */
+  width: 200px; /* Set a fixed width for the logo */
   height: auto; /* Maintains the aspect ratio */
-  margin-left: 30px;
   object-fit: cover; /* Ensures the image covers the area, cropping as needed */
   object-position: top; /* Aligns the top of the image with the container, cropping the bottom */
 }
@@ -36,8 +37,82 @@ body {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 10px; /* Adjust space between buttons */
-  margin-right: 70px;
+  gap: 10px; /* Space between buttons */
+  margin: 0;
+}
+
+.site-button {
+  background-color: transparent;
+  border: 1px solid #437ab2;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: "Blair ITC Medium", sans-serif;
+  font-size: 12px; /* Adjusted font size */
+  font-weight: bold; /* Adjusted to bold */
+  line-height: 18px;
+  padding: 10px 16px; /* Adjusted padding */
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: background-color 300ms ease-in;
+}
+
+.site-button:hover,
+.site-button:active {
+  outline: 0;
+  background-color: #266db6;
+  cursor: pointer;
+}
+
+.site-button:before {
+  background-color: #4f6d7a;
+  content: "";
+  height: calc(100% + 1px); /* Reduced extra height for a tighter fit */
+  position: absolute;
+  right: -3px; /* Adjusted for smaller overall size */
+  top: -3px; /* Adjusted for smaller overall size */
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .navigation-list {
+    gap: 5px; /* Reduce gap between buttons */
+  }
+
+  .site-button {
+    font-size: 10px; /* Smaller font size for medium screens */
+    padding: 4px 8px; /* Smaller padding for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center logo and navigation */
+    padding: 10px 20px; /* Reduced padding */
+  }
+
+  .main-navigation {
+    width: 100%; /* Take full width */
+    display: flex;
+    justify-content: center; /* Center the navigation */
+  }
+
+  .navigation-list {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+    gap: 5px; /* Reduce gap between buttons */
+  }
+
+  .site-button {
+    font-size: 10px; /* Smaller font size for small screens */
+    padding: 4px 8px; /* Smaller padding for small screens */
+  }
 }
 
 .work-title {
@@ -50,17 +125,35 @@ body {
   margin-bottom: 30px;
 }
 
+/* Center work-title on medium and small screens */
+@media (max-width: 1024px) {
+  .work-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center; /* Center the text */
+  }
+}
+
+@media (max-width: 768px) {
+  .work-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center; /* Center the text */
+  }
+}
+
 .work-card-grid {
   display: grid;
   gap: 2rem; /* Doubled the gap from 1rem to 2rem */
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center; /* Center the grid container */
   margin-left: 40px;
 }
 
 @media (max-width: 1024px) {
   .work-card-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    margin-left: 20px; /* Reduce margin on smaller screens */
+    margin-left: 0px; /* Reduce margin on smaller screens */
   }
 }
 
@@ -69,6 +162,7 @@ body {
     grid-template-columns: 1fr; /* 1 column on small screens */
     margin-left: 0; /* Remove margin on small screens */
     gap: 1rem; /* Adjust gap for smaller screens */
+    justify-content: center; /* Center the grid container */
   }
 }
 
@@ -82,6 +176,17 @@ body {
   width: 100%; /* Takes full width of its container up to max-width */
   max-width: 400px; /* Sets a maximum width */
   padding: 20px; /* More internal space */
+  margin: auto; /* Center the work-card */
+}
+
+@media (max-width: 768px) {
+  .work-card {
+    width: calc(100% - 20px); /* Ensure it fits within the viewport */
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: scale(0.9); /* Scale down by 10% */
+    margin: auto; /* Center the work-card */
+  }
 }
 
 .work-card iframe {
@@ -103,11 +208,18 @@ body {
   margin-left: 17px;
 }
 
+.mobile-images-container {
+  display: flex;
+  justify-content: space-between; /* Space between images */
+}
+
 .mobile-image {
   height: 260px; /* Sets a fixed height */
   object-fit: cover;
   border-radius: 25px;
   padding: 3px;
+  flex: 1; /* Ensure images take equal space */
+  max-width: calc(33.33% - 6px); /* Adjust for padding */
 }
 
 .card-title,
@@ -139,14 +251,14 @@ body {
   margin-right: 30;
 }
 
-.site-button {
+.work-site-button {
   background-color: transparent;
   border: 1px solid #437ab2;
   box-sizing: border-box;
   color: #00132c;
-  font-family: "blairMdITC TT", sans-serif;
+  font-family: "Blair ITC Medium", sans-serif;
   font-size: 10px; /* Reduced from 12px to make the text smaller */
-  font-weight: extra-bold;
+  font-weight: bold;
   line-height: 18px; /* Reduced to fit the smaller font */
   padding: 4px 8px; /* Reduced padding to make the button smaller */
   position: relative;
@@ -156,30 +268,20 @@ body {
   touch-action: manipulation;
 }
 
-.site-button:hover,
-.site-button:active {
+.work-site-button:hover,
+.work-site-button:active {
   outline: 0;
 }
 
-.site-button:hover {
+.work-site-button:hover {
   background-color: transparent;
   cursor: pointer;
 }
 
-.site-button:before {
+.work-site-button:before {
   background-color: #4f6d7a;
   content: "";
   height: calc(100% + 1px); /* Reduced extra height for a tighter fit */
-  position: absolute;
-  right: -3px; /* Adjusted for smaller overall size */
-  top: -3px; /* Adjusted for smaller overall size */
-  transition: background-color 300ms ease-in;
-  width: 100%;
-  z-index: -1;
-}
-
-.site-button:hover:before {
-  background-color: #266db6;
 }
 
 .modal {
@@ -200,12 +302,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(
-    38,
-    109,
-    182,
-    0.95
-  ); /* Correctly formatted RGBA for semi-transparent blue */
+  background-color: rgba(38, 109, 182, 0.95);
+  background-color: rgba(38, 109, 182, 0.95);
   padding: 30px;
   font-size: 12px;
   border: 1px solid #888;
@@ -269,22 +367,4 @@ body {
   gap: 20px;
   flex-wrap: nowrap; /* This prevents wrapping */
   align-items: center; /* Vertically centers the content in the flex container */
-}
-
-@media (min-width: 768px) {
-  .site-button {
-    padding: 16px 32px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .work-card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .work-card-grid {
-    grid-template-columns: 1fr;
-  }
 }

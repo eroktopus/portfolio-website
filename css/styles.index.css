@@ -107,3 +107,33 @@ body {
   padding-top: 200px;
   padding-bottom: 100px;
 }
+
+@media (max-width: 576px) {
+  .site-logo {
+    width: 200px; /* Reduce the width of the logo */
+    height: 200px; /* Reduce the height of the logo */
+  }
+
+  .job-button {
+    font-size: 14px; /* Reduce font size for buttons */
+    padding: 10px 10px; /* Reduce padding for buttons */
+  }
+
+  .social-media img {
+    width: 24px; /* Reduce size of social media icons */
+    height: 24px; /* Reduce size of social media icons */
+  }
+
+  .profile {
+    padding-top: 15px; /* Reduce top padding by 70% (from 50px to 15px) */
+  }
+
+  .site-logo-container {
+    margin-top: 60px; /* Reduce margin-top by 70% (from 200px to 60px) */
+  }
+
+  .page-footer {
+    padding-top: 60px; /* Reduce padding-top by 70% (from 200px to 60px) */
+    padding-bottom: 30px; /* Reduce padding-bottom by 70% (from 100px to 30px) */
+  }
+}
