@@ -65,7 +65,7 @@ body {
 .work-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a 3D effect */
   border-radius: 8px; /* Rounds the corners */
-  overflow: hidden; /* Ensures content adheres to the border radius */
+  /* overflow: hidden; */
   background-color: #4f6d7a; /* Sets background color */
   transition: transform 0.3s; /* Optional: Adds a transform effect on hover */
   width: 100%; /* Takes full width of its container up to max-width */
