@@ -47,9 +47,9 @@ body {
   border: 1px solid #437ab2;
   box-sizing: border-box;
   color: #00132c;
-  font-family: "blairMdITC TT", sans-serif;
+  font-family: "Blair ITC Medium", sans-serif; /* Ensure correct font is applied */
   font-size: 17px;
-  font-weight: extra-bold;
+  font-weight: bold; /* Use bold font weight */
   line-height: 18px;
   padding: 15px 15px;
   position: relative;

@@ -78,6 +78,41 @@ body {
   z-index: -1;
 }
 
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  background-color: #437ab2;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 2px;
+  background-color: #437ab2;
+  display: block;
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #00132c;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  bottom: -8px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .navigation-list {
@@ -90,28 +125,52 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .page-header {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align logo and navigation to the start */
-    padding: 10px 20px; /* Reduced padding */
+@media (max-width: 767px) {
+  .main-navigation {
+    display: none;
   }
 
-  .main-navigation {
-    width: 100%; /* Take full width */
-    display: flex;
-    justify-content: center; /* Center the navigation */
+  .hamburger-menu {
+    display: block;
+    margin-left: auto;
   }
 
   .navigation-list {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center align buttons */
-    gap: 5px; /* Reduce gap between buttons */
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 5px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 30%;
+    background-color: #616469;
+  }
+
+  .navigation-list.open {
+    display: flex;
+  }
+
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-header-logo {
+    width: 100px;
+  }
+
+  .main-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
   }
 
   .site-button {
-    font-size: 10px; /* Smaller font size for small screens */
-    padding: 4px 8px; /* Smaller padding for small screens */
+    font-size: 10px;
+    padding: 4px 8px;
   }
 }
 
