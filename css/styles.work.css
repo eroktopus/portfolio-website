@@ -360,7 +360,8 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.9); /* More opaque black background */
+  z-index: 1000; /* Ensures the modal is on top of other elements */
 }
 
 .modal-content {
@@ -368,7 +369,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(38, 109, 182, 0.95);
+  background-color: #616469;
   padding: 30px;
   font-size: 12px;
   border: 1px solid #888;
@@ -380,6 +381,8 @@ body {
   overflow: hidden; /* Prevents content from spilling out */
   position: relative; /* Ensures that the close button is positioned relative to this container */
   margin: 20px auto; /* Center the modal-content horizontally and add spacing */
+}
+
 }
 
 .close-button {
