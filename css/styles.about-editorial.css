@@ -188,18 +188,14 @@ body {
   text-align: center;
   margin: auto;
   max-width: 400px;
-  padding-top: 40px;
   margin-top: 40px;
+  padding-top: 60px;
   margin-bottom: 30px;
 }
 
 .text-center {
   text-align: center;
   padding-bottom: 20px;
-}
-
-.temp-title {
-  margin-left: 480px;
 }
 
 .work-card {
@@ -209,12 +205,23 @@ body {
   background-color: #4f6d7a; /* Sets background color */
   transition: transform 0.3s; /* Optional: Adds a transform effect on hover */
   width: calc(100% - 140px);
-  max-width: 1200px;
-  padding: 50px;
+  max-width: 1200px; /* Sets a maximum width */
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 20px;
+  padding-bottom: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .work-card {
+    padding-left: 20px; /* Reduced padding on small screens */
+    padding-right: 20px; /* Reduced padding on small screens */
+    width: calc(100% - 40px); /* Adjusted width for small screens */
+  }
 }
 
 .work-card:hover {
@@ -228,7 +235,6 @@ body {
   justify-content: center;
   text-align: center;
   margin-top: 20px;
-  margin-left: 20;
   min-width: 60%; /* Adjust this value based on your design needs */
 }
 

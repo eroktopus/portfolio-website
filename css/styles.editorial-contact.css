@@ -188,18 +188,18 @@ body {
   text-align: center;
   margin: auto;
   max-width: 400px;
-  padding-top: 40px;
   margin-top: 40px;
+  padding-top: 60px;
   margin-bottom: 30px;
+}
+
+.row justify-content-center {
+  padding-top: 50px;
 }
 
 .text-center {
   text-align: center;
   padding-bottom: 20px;
-}
-
-.temp-title {
-  margin-left: 480px;
 }
 
 .work-card {
@@ -209,8 +209,11 @@ body {
   background-color: #4f6d7a; /* Sets background color */
   transition: transform 0.3s; /* Optional: Adds a transform effect on hover */
   width: calc(100% - 140px);
-  max-width: 1200px;
-  padding: 50px;
+  max-width: 1200px; /* Sets a maximum width */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: auto;
@@ -219,6 +222,77 @@ body {
 
 .work-card:hover {
   transform: scale(1.05); /* Optional: Scales up cards slightly on hover */
+}
+
+.fa-map-marker,
+.fa-phone,
+.fa-paper-plane {
+  color: #4f6d7a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+}
+
+.fa-paper-plane {
+  font-size: 31px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of columns */
+  justify-content: center;
+  gap: 20px; /* Space between columns */
+}
+
+.col-md-4 {
+  flex: 0 0 33.3333%; /* Each column takes up one-third of the row */
+  max-width: 33.3333%;
+  font-size: 20px; /* Existing font size */
+  display: flex; /* Ensures the container is a flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Centers children horizontally */
+  justify-content: center; /* Centers children vertically */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  padding: 10px; /* Adds some padding */
+}
+
+.dbox {
+  width: 100%; /* Takes full width of the column */
+  display: flex; /* Ensures this is a flex container */
+  flex-direction: column; /* Aligns children vertically */
+  align-items: center; /* Centers content horizontally in the dbox */
+  justify-content: center; /* Centers content vertically in the dbox */
+}
+
+@media (max-width: 1024px) {
+  .col-md-4 {
+    flex: 0 0 50%; /* Each column takes up half width */
+    max-width: 50%; /* Ensures columns do not exceed half width */
+    font-size: 18px; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .work-card {
+    width: calc(100% - 40px); /* Make the card wider on small screens */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .col-md-4 {
+    flex: 0 0 100%; /* Each column takes up full width */
+    max-width: 100%; /* Ensures columns do not exceed full width */
+    font-size: 16px; /* Reduce font size for small screens */
+    margin-bottom: 20px; /* Adds space between stacked items */
+    padding: 5px; /* Reduce padding to fit content */
+  }
+
+  .dbox {
+    padding: 10px; /* Add padding within the box to prevent content cut-off */
+  }
+
+  .text {
+    word-wrap: break-word; /* Ensure text does not overflow */
+  }
 }
 
 .page-footer {
