@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const detailsButtons = document.querySelectorAll(".detailsButton");
   detailsButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      const modal = this.parentNode.parentNode.querySelector(".modal"); // Adjusted to ensure correct modal is selected
-      if (modal) {
-        modal.style.display = "block";
+      const modal = this.parentNode.parentNode.nextElementSibling;
+      if (modal && modal.classList.contains("modal")) {
+        modal.style.display = "flex"; // Ensure modal is displayed as flex to cover full screen
       } else {
         console.error("Modal not found for button", this);
       }
@@ -28,4 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
       event.target.style.display = "none";
     }
   };
+
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      const openModal = document.querySelector(
+        ".modal[style*='display: flex']"
+      );
+      if (openModal) {
+        openModal.style.display = "none";
+      }
+    }
+  });
 });
