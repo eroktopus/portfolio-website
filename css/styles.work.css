@@ -373,7 +373,7 @@ body {
   justify-content: center;
   background-color: #616469;
   padding: 30px;
-  font-size: 12px;
+  font-size: 14px;
   border: 1px solid #888;
   box-sizing: border-box; /* Include padding and border in the width calculation */
   width: 800px; /* Set a fixed width but ensure it does not exceed the viewport width */
