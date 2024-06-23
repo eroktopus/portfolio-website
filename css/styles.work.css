@@ -358,31 +358,39 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.7); /* More opaque black background */
   z-index: 1000; /* Ensures the modal is on top of other elements */
-  padding-top: 20px; /* Add top padding */
-  padding-bottom: 20px; /* Add bottom padding */
+  padding: 20px 0; /* Add vertical padding */
   overflow-y: auto; /* Add vertical scrolling if content overflows */
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #616469;
-  padding: 30px;
+  padding: 20px;
   font-size: 14px;
-  border: 1px solid #888;
+  border: 1px solid #202020;
   box-sizing: border-box; /* Include padding and border in the width calculation */
-  width: 800px; /* Set a fixed width but ensure it does not exceed the viewport width */
-  max-width: 96%; /* Prevents the modal from being wider than the screen */
+  width: 90%; /* Set a wider fixed width */
+  max-width: 1200px; /* Set a maximum width */
+  max-height: 90%; /* Ensure the modal content does not exceed the viewport height */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden; /* Prevents content from spilling out */
+  overflow-y: auto; /* Add vertical scrolling if content overflows */
   position: relative; /* Ensures that the close button is positioned relative to this container */
-  margin: 20px auto; /* Center the modal-content horizontally and add spacing */
+  margin: auto; /* Center the modal-content horizontally and vertically */
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.modal-text {
+  flex: 1;
+  padding-right: 20px;
 }
 
 .close-button {
@@ -404,13 +412,96 @@ body {
 }
 
 @media (max-width: 768px) {
-  .modal {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .modal-content {
+    width: 90%;
+    max-height: 90%; /* Ensure the modal content does not exceed the viewport height */
+    font-size: 12px; /* Adjust font size for readability */
     overflow-y: auto; /* Add vertical scrolling if content overflows */
+    margin: auto; /* Center the modal */
+  }
+
+  .modal-header {
+    flex-direction: column;
+  }
+
+  .angular-image {
+    width: 100%;
+    margin-bottom: 20px; /* Add space below the image on small screens */
+  }
+}
+
+.angular-headline {
+  text-align: left;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.angular-image {
+  width: 400px; /* Adjust width as needed */
+  padding-top: 75px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: auto;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.modal-text2 {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  padding-top: 30px;
+}
+
+.image-container {
+  flex: 0 0 auto; /* Prevent shrinking */
+  margin-right: 20px; /* Space between images and text */
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  padding-top: 80px;
+}
+
+.text-container {
+  flex: 1; /* Allow text to take remaining space */
+}
+
+.angular-image-secondary {
+  width: 400px; /* Keep the original size */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Space between images */
+}
+
+.angular-image-profile {
+  width: 400px; /* Adjust width as needed */
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: auto;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.approach-titles {
+  margin-top: 40px;
+}
+
+.approach-explanation {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal-text2 {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+
+  .image-container {
+    margin-right: 0;
+    margin-bottom: 20px; /* Space below images on small screens */
+    width: 100%; /* Full width on small screens */
+  }
+
+  .angular-image-secondary {
+    width: 100%; /* Full width on small screens */
   }
 }
 

@@ -202,13 +202,13 @@ body {
 }
 
 .work-card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a 3D effect */
-  border-radius: 8px; /* Rounds the corners */
-  overflow: hidden; /* Ensures content adheres to the border radius */
-  background-color: #4f6d7a; /* Sets background color */
-  transition: transform 0.3s; /* Optional: Adds a transform effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #4f6d7a;
+  transition: transform 0.3s;
   width: calc(100% - 140px);
-  max-width: 1200px; /* Sets a maximum width */
+  max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 50px;
@@ -220,77 +220,74 @@ body {
 }
 
 .work-card:hover {
-  transform: scale(1.05); /* Optional: Scales up cards slightly on hover */
+  transform: scale(1.05);
 }
 
 .fa-map-marker,
 .fa-phone,
-.fa-paper-plane {
+.fa-paper-plane,
+.fa-file {
   color: #4f6d7a;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
   font-size: 40px;
-}
-
-.fa-paper-plane {
-  font-size: 31px;
 }
 
 .row {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping of columns */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Space between columns */
+  gap: 20px;
 }
 
 .col-md-4 {
-  flex: 0 0 33.3333%; /* Each column takes up one-third of the row */
+  flex: 0 0 33.3333%;
   max-width: 33.3333%;
-  font-size: 20px; /* Existing font size */
-  display: flex; /* Ensures the container is a flexbox */
-  flex-direction: column; /* Stacks children vertically */
-  align-items: center; /* Centers children horizontally */
-  justify-content: center; /* Centers children vertically */
-  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
-  padding: 10px; /* Adds some padding */
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .dbox {
-  width: 100%; /* Takes full width of the column */
-  display: flex; /* Ensures this is a flex container */
-  flex-direction: column; /* Aligns children vertically */
-  align-items: center; /* Centers content horizontally in the dbox */
-  justify-content: center; /* Centers content vertically in the dbox */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
   .col-md-4 {
-    flex: 0 0 50%; /* Each column takes up half width */
-    max-width: 50%; /* Ensures columns do not exceed half width */
-    font-size: 18px; /* Adjust font size for medium screens */
+    flex: 0 0 50%;
+    max-width: 50%;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 768px) {
   .work-card {
-    width: calc(100% - 40px); /* Make the card wider on small screens */
+    width: calc(100% - 40px);
     padding-left: 10px;
     padding-right: 10px;
   }
 
   .col-md-4 {
-    flex: 0 0 100%; /* Each column takes up full width */
-    max-width: 100%; /* Ensures columns do not exceed full width */
-    font-size: 16px; /* Reduce font size for small screens */
-    margin-bottom: 20px; /* Adds space between stacked items */
-    padding: 5px; /* Reduce padding to fit content */
+    flex: 0 0 100%;
+    max-width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 5px;
   }
 
   .dbox {
-    padding: 10px; /* Add padding within the box to prevent content cut-off */
+    padding: 10px;
   }
 
   .text {
-    word-wrap: break-word; /* Ensure text does not overflow */
+    word-wrap: break-word;
   }
 }
 
